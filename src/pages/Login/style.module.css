@@ -43,6 +43,9 @@
           color: white;
           outline-color: rgb(0, 240, 255);
         }
+        .inputError {
+          border-color: red;
+        }
       }
 
       button {
@@ -59,6 +62,12 @@
         &:hover {
           text-decoration: none;
         }
+      }
+
+      p {
+        color: red;
+        font-size: 12px;
+        text-align: right;
       }
     }
   }
