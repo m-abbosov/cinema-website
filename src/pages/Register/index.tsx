@@ -90,7 +90,9 @@ function Register() {
             ) : null}
           </div>
 
-          <Button type="submit">{loading ? "Loading..." : "Register"}</Button>
+          <Button disabled={loading} type="submit">
+            {loading ? "Loading..." : "Register"}
+          </Button>
           <Link className={css.link} to="/login">
             Login
           </Link>

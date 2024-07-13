@@ -16,6 +16,7 @@ const useAuth = () => {
       const res = await API.post("/accounts/token/", {username, password});
       // localStorage.setItem("token", res.data.token);
       console.log(res.data);
+      // navigate("/");
     } catch (err) {
       if (axios.isAxiosError(err)) {
         setError(err.response?.data?.message || "An unexpected error occurred");
@@ -39,6 +40,7 @@ const useAuth = () => {
         password,
       });
       console.log(res.data);
+      // navigate("/login");
     } catch (err) {
       if (axios.isAxiosError(err)) {
         setError(err.response?.data?.message || "An unexpected error occurred");

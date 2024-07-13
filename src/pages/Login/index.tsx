@@ -6,7 +6,7 @@ import Button from "../../components/Button";
 import css from "./style.module.css";
 
 function Login() {
-  const {login, error} = useAuth();
+  const {login, loading, error} = useAuth();
   const formik = useFormik({
     initialValues: {
       username: "",
@@ -62,7 +62,9 @@ function Login() {
               <p>{formik.errors.password}</p>
             ) : null}
           </div>
-          <Button type="submit">Login</Button>
+          <Button disabled={loading} type="submit">
+            {loading ? "Loading..." : "Login"}
+          </Button>
           <Link className={css.link} to="/register">
             Register
           </Link>
