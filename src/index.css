@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "TT Travels";
+}
+
+body {
+  font-family: "TT Travels";
+}
+
+button {
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+}
+
+[class^="number-slide"],
+[class*=" number-slide"] {
+  background: grey;
+  height: 300px;
+  max-height: 100vh;
+}
+
+[class^="number-slide"]:hover,
+[class*=" number-slide"]:hover {
+  background: red;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.carousel__cell {
+  cursor: pointer;
+  position: absolute;
+  width: 600px;
+  height: 300px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
